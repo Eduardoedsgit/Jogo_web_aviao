@@ -13,7 +13,7 @@
     position: relative;
     /*Esconde tudo q sai da tela*/
     overflow: hidden;
-    /*Animação do fundo da tela*/
+    /*Animação do fundo da tela do jogo*/
     animation: sky-climate 50s infinite linear;
 }
 
