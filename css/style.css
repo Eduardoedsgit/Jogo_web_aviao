@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    /*Esconde tudo q sai da tela*/
+    overflow: hidden;
+    /*Animação do fundo da tela*/
+    animation: sky-climate 50s infinite linear;
+}
+
+
+
+/*Acesso as configurações da nuvem do jogo*/
+.cloud1{
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    animation: cloud-animation 15s infinite linear;
+}
+
+.cloud2{
+    position: absolute;
+    bottom: 200px;
+    width: 150px;
+    animation: cloud-animation 25s infinite linear;
+}
+
+.cloud3{
+    position: absolute;
+    bottom: 150px;
+    width: 70px;
+    animation: cloud-animation 25s infinite linear;
+}
+
+/*Estilização da nave principal*/
+.main_ship{
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    animation: nave_ship_animation 5s infinite;
+}
+
+/*Animação da nave principal do jogo*/
+@keyframes nave_ship_animation{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 200px;
+    }
+    0%{
+        bottom: 600px;
+    }
+    0%{
+        bottom: 1000px;
+    }
+
+}
+
+/*Animação da nuvems do jogo*/
+
+@keyframes cloud-animation{
+    /*onde começa a animação*/
+    from{
+        right: -90px;
+    }
+    /*Onde termina a animação*/
+    to{
+        right: 100%;
+    }
+}
+
+
+/*Animação da tela de fundo do jogo para escurecer*/
+@keyframes sky-climate{
+    40%{
+        background-color: blue;
+    }
+    80%{
+        background-color: rgb(59, 64, 83);
+    }
+
+    90%{
+        background-color: rgb(7, 1, 31);
+    }
+}
